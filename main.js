@@ -42,28 +42,28 @@ const containerLaura = document.querySelector(".verMasLaura");
             containerMelanie.innerHTML += `
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Trabajo como supervisora en el área de Ingeniería en una empresa.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Estudios avanzados en Ingeniería Electrónica.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body center flex-column">
                   <p class="card-text">28 años, viviendo en Buenos Aires, CABA.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body center flex-column">
                   <p class="card-text">Estudiando programación web con el objetivo de poder insertarme en el mundo IT.</p>
                 </div>
               </div>
@@ -76,28 +76,28 @@ const containerLaura = document.querySelector(".verMasLaura");
           containerLaura.innerHTML += `
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body center flex-column">
                   <p class="card-text">Trabajo en comercio, de atención al público.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body center flex-column">
                   <p class="card-text">Estudio Licenciatura en Sistemas, en la UNLP.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body center flex-column">
                   <p class="card-text">Tengo 30 años, vivo en La Plata.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
-                <div class="card-body d-flex flex-column">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Realizo varios cursos de programación para insertarme en el mundo IT.</p>
                 </div>
               </div>
