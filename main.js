@@ -7,6 +7,31 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Error al cargar la navbar:', error));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM completamente cargado y analizado');
+  
+  const themeToggleBtn = document.getElementById('theme');
+  if (themeToggleBtn) {
+    const body = document.body;
+    const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+      themeToggleBtn.textContent = 'Modo Claro';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDarkMode);
+
+      themeToggleBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Oscuro';
+    });
+  } else {
+    console.error('Botón de tema no encontrado');
+  }
+});
+
+
 
 let btnVerMasMelanie = document.getElementById("btnVerMasMelanie");  
 const containerMelanie = document.querySelector(".verMasMelanie");

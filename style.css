@@ -40,6 +40,15 @@ h5{
     background-color: #6c757d; 
     color: #ffffff; 
     border: none; 
+
+}
+
+.btn-custom2 {
+    background-color: #6c757d; 
+    color: #ffffff; 
+    border: none;
+    margin-top: 10px;
+    margin-left: 0;  
 }
 
 .btn-custom:hover {
@@ -79,3 +88,20 @@ textarea.form-control-sm {
     height: 500px; 
     object-fit: cover; 
 }
+
+/* ESTILOS DE MODO OSCURO */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+  }
