@@ -112,6 +112,32 @@ const containerLaura = document.querySelector(".verMasLaura");
     alert("Formulario enviado");
     return true;
 }
+function toggleContraste(){
+  let form = document.getElementById("myForm");
+  let formBody = document.getElementById("formBody");
+  let formBtnEstilos = document.getElementById("formBtnEstilos");
+  let formBtnEnviar = document.getElementById("formBtnEnviar");
+
+  formBody.classList.remove("formBodyContraste");
+  form.classList.remove("bgAltoContraste");
+  formBtnEstilos.classList.remove("formBtnEstilosAltoContraste");
+  formBtnEnviar.classList.remove("formBtnEstilosAltoContraste"); 
+  
+}
+
+function toggleAltoContraste() {
+  let form = document.getElementById("myForm");
+  let formBody = document.getElementById("formBody");
+  let formBtnEstilos = document.getElementById("formBtnEstilos");
+  let formBtnEnviar= document.getElementById("formBtnEnviar");
+
+  formBody.classList.add("formBodyContraste");
+  form.classList.add("bgAltoContraste");
+  formBtnEstilos.classList.add("formBtnEstilosAltoContraste");
+  formBtnEnviar.classList.remove("formBtnEstilosAltoContraste");
+  formBtnEnviar.classList.add("formBtnEstilosAltoContraste"); 
+}
+
 
   
   
