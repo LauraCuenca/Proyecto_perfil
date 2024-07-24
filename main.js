@@ -7,6 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Error al cargar la navbar:', error));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM completamente cargado y analizado');
+  
+  const themeToggleBtn = document.getElementById('theme');
+  if (themeToggleBtn) {
+    const body = document.body;
+    const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+      themeToggleBtn.textContent = 'Modo Claro';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDarkMode);
+
+      themeToggleBtn.textContent = isDarkMode ? 'Modo Claro' : 'Modo Oscuro';
+    });
+  } else {
+    console.error('Botón de tema no encontrado');
+  }
+});
 
 let btnVerMasMelanie = document.getElementById("btnVerMasMelanie");  
 const containerMelanie = document.querySelector(".verMasMelanie");
@@ -18,28 +41,28 @@ const containerLaura = document.querySelector(".verMasLaura");
 
             containerMelanie.innerHTML += `
             <div class="col">
-              <div class="card h-100 ">
-                <div class="card-body center flex-column">
+              <div class="card h-100">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Trabajo como supervisora en el área de Ingeniería en una empresa.</p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card h-100 ">
-                <div class="card-body center flex-column">
+              <div class="card h-100">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Estudios avanzados en Ingeniería Electrónica.</p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card h-100 ">
+              <div class="card h-100">
                 <div class="card-body center flex-column">
                   <p class="card-text">28 años, viviendo en Buenos Aires, CABA.</p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card h-100 ">
+              <div class="card h-100">
                 <div class="card-body center flex-column">
                   <p class="card-text">Estudiando programación web con el objetivo de poder insertarme en el mundo IT.</p>
                 </div>
@@ -73,8 +96,8 @@ const containerLaura = document.querySelector(".verMasLaura");
               </div>
             </div>
             <div class="col">
-              <div class="card h-100 ">
-                <div class="card-body center flex-column">
+              <div class="card h-100">
+                <div class="card-body centerflex-column">
                   <p class="card-text">Realizo varios cursos de programación para insertarme en el mundo IT.</p>
                 </div>
               </div>
@@ -82,7 +105,6 @@ const containerLaura = document.querySelector(".verMasLaura");
           btnVerMasLaura.classList.add('d-none');
       });
   }
-
   function validarFormulario() {
     let nombre = document.getElementById('name').value;
     let email = document.getElementById('email').value;
@@ -112,33 +134,6 @@ const containerLaura = document.querySelector(".verMasLaura");
     alert("Formulario enviado");
     return true;
 }
-function toggleContraste(){
-  let form = document.getElementById("myForm");
-  let formBody = document.getElementById("formBody");
-  let formBtnEstilos = document.getElementById("formBtnEstilos");
-  let formBtnEnviar = document.getElementById("formBtnEnviar");
-
-  formBody.classList.remove("formBodyContraste");
-  form.classList.remove("bgAltoContraste");
-  formBtnEstilos.classList.remove("formBtnEstilosAltoContraste");
-  formBtnEnviar.classList.remove("formBtnEstilosAltoContraste"); 
-  
-}
-
-function toggleAltoContraste() {
-  let form = document.getElementById("myForm");
-  let formBody = document.getElementById("formBody");
-  let formBtnEstilos = document.getElementById("formBtnEstilos");
-  let formBtnEnviar= document.getElementById("formBtnEnviar");
-
-  formBody.classList.add("formBodyContraste");
-  form.classList.add("bgAltoContraste");
-  formBtnEstilos.classList.add("formBtnEstilosAltoContraste");
-  formBtnEnviar.classList.remove("formBtnEstilosAltoContraste");
-  formBtnEnviar.classList.add("formBtnEstilosAltoContraste"); 
-}
-
-
   
   
     

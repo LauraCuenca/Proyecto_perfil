@@ -9,38 +9,37 @@
 </head>
 <body>
     <div id="navbar-container"></div>
-    <div class="container py-4 d-flex justify-content-center align-items-center formContainer">
-        <form id="myForm" action="#" method="POST" onsubmit="return validarFormulario()">
-            <h1 class="mb-4">Formulario de Contacto</h1>
-            <div id="formBody" class="formBody">
-                <div class="mb-3 formBodyItem">
-                    <label for="name" class="form-label">Nombre y Apellido:</label>
-                    <input type="text" id="name" name="name" class="form-control form-control-sm" >
-                </div>
-                
-                <div class="mb-3 formBodyItem">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control form-control-sm" >
-                </div>
-                
-                <div class="mb-3 formBodyItem">
-                    <label for="message" class="form-label">Mensaje:</label>
-                    <textarea id="message" name="message" class="form-control form-control-sm" rows="4" ></textarea>
-                </div>
-                <div class="mb-3">
-                    <p id="msjError" class="msjError"></p>
-                </div>
-                <div  id="formBtnEnviar">
-                    <button class="btn btn-custom" id="btnEnviar" type="submit" >Enviar</button>
-                </div>
+    <div class="container py-4">
+        <h1 class="mb-4">Formulario de Contacto</h1>
+        
+        <form action="#" class="form" method="POST" onsubmit="return validarFormulario()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre y Apellido:</label>
+                <input type="text" id="name" name="name" class="form-control form-control-sm" >
             </div>
-            </form>
-        <!-- BOTONES ESTILOS -->
-        <div id="formBtnEstilos" class="mt-3">
-            <button class="btn btn-custom" id="btnEstilo1" type="submit" onclick="toggleContraste()" >Estilo 1</button>
-            <button id="btnEstiloAltoContraste"  class="btn btn-custom" type="submit" onclick="toggleAltoContraste()">Estilo de Alto Contraste</button>
-        </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control form-control-sm" >
+            </div>
+            
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje:</label>
+                <textarea id="message" name="message" class="form-control form-control-sm" rows="4" ></textarea>
+            </div>
+            <div class="mb-3">
+                <p id="msjError" class="msjError"></p>
+            </div>
+            <div  id="formBtnEnviar">
+                <button class="btn btn-custom" id="btnEnviar" type="submit" >Enviar</button>
+            </div>
+            
+        </form>
     </div>
+      <!-- Footer -->
+  <footer class="bg-light text-center py-3">
+    <button id="theme" class="btn btn-secondary">Modo Oscuro</button>
+  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
